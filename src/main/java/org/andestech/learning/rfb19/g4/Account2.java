@@ -3,7 +3,9 @@ package org.andestech.learning.rfb19.g4;
 
 public class Account2 {
 
-private static final double MAX_BALANCE = 1_000_000, MIN_BALANCE = 10;
+private static final double MAX_BALANCE = 1_000_000, MIN_BALANCE = 10,
+                            DELTA_MIN = 10, DELTA_MAX = 1_000 ;
+
 
 private static int counter = 0;
 
@@ -57,7 +59,7 @@ private double balance;
     }
 
     private static boolean isDeltaValid(double delta){
-        if(delta >=0) return true;
+        if(delta >=0 && delta < DELTA_MAX && delta > DELTA_MIN) return true;
         else return false;
     }
 
