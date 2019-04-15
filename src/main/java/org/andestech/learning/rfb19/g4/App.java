@@ -27,6 +27,10 @@ public class App
 
         System.out.println("Couter: " + Account.getCounter());
 
+        //-----------
+
+        CreditAccount creditAccount =
+                CreditAccount.createCreditAccount(100,12312312);
 
     }
 }
