@@ -1,8 +1,8 @@
 package org.andestech.learning.rfb19.g4;
 
-public class Car {
+public class Car extends Vehicle implements IDriveCheckable {
 
-    double m, power;
+    double power;
 
 
     public Car(){
@@ -22,19 +22,30 @@ public class Car {
 
     }
 
-    void ignit(){
+    public void ignit(){
         System.out.println("Car ignit!");
 
     }
 
-    void drive(){
+    public void drive(){
         System.out.println("Car drive!");
         //...
         //...
     }
 
-    void stop(){
+    public void stop(){
         System.out.println("Car stop!");
     };
 
+    @Override
+    public void checkPC() {
+        System.out.println("CheckPC start...");
+        //...
+
+    }
+
+    @Override
+    boolean isTrailer() {
+        return false;
+    }
 }

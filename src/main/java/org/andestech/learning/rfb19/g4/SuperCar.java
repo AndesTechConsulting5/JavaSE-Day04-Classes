@@ -4,4 +4,10 @@ public class SuperCar extends Car {
 
 
 
+    public void ignit(){
+        System.out.println("SuperCar ignit");
+
+    }
+
+
 }

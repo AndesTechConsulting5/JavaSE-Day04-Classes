@@ -11,8 +11,13 @@ public class Truck extends Car {
     }
 
     @Override
-    void drive() {
+    public void drive() {
        // super.drive();
         System.out.println("Truck drive!!!");
+    }
+
+    @Override
+    boolean isTrailer() {
+        return true;
     }
 }

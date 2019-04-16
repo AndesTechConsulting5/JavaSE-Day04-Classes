@@ -18,7 +18,40 @@ public class AppInherit
 //        return  st1 + st2; }
 
 
+    private static void fullTest(IDriveCheckable  car)
+    {
+        // check board Computer
+        car.checkPC();
+        // start
+        car.ignit();
+        //...
+        car.drive();
+        //..
+        car.stop();
+}
 
+    private static void fullTest2(Object  car0)
+    {
+        // check board Computer
+        //IDriveCheckable car = (IDriveCheckable)car0;
+        Car car = null;
+        if (car0 instanceof Car){
+
+        car = (Car)car0;}
+        else{
+            System.out.println("Wrong type: " + car0);
+            return;
+        }
+
+
+        car.checkPC();
+        // start
+        car.ignit();
+        //...
+        car.drive();
+        //..
+        car.stop();
+    }
 
 
 
@@ -47,7 +80,23 @@ public class AppInherit
 
         ( (Car) o).drive();
 
+        System.out.println("----------------------");
+     fullTest(car);
+     fullTest(superCar);
+     fullTest(truck);
 
+        System.out.println("-------------------------");
+
+     fullTest2(truck);
+     fullTest2(new Account(new Customer("aa","bb","address"),2222));
+     fullTest2(2137987);
+     fullTest2("qeywii");
+
+
+     IDrivable drivable = new SuperCar();
+     drivable.drive();
+
+     Vehicle vehicle;
 
 
 
